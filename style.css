@@ -1,0 +1,505 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   1. CONFIGURACIÓN GLOBAL Y RESET
+   ========================================= */
+html {
+    scroll-behavior: smooth; /* Hace que el salto al banner sea fluido */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+}
+
+body {
+    background-color: #000; /* Fondo negro profundo */
+    /* Prioridad a Futura; Trebuchet es una alternativa geométrica similar */
+    font-family: 'Futura', 'Trebuchet MS', sans-serif;
+    color: white;
+}
+
+/* =========================================
+   2. NAVEGACIÓN (MENÚ)
+   ========================================= */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Alinea HOME a la izquierda y el resto a la derecha */
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #333; /* Línea gris muy sutil para separar del banner */
+    background-color: #000;
+}
+
+.menu-items {
+    display: flex;
+    gap: 15px; /* Separación horizontal entre botones */
+}
+
+/* =========================================
+   3. BOTONES Y ANIMACIONES
+   ========================================= */
+.btn {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 25px;
+    border: 1px solid white;
+    border-radius: 50px; /* Forma de cápsula/píldora */
+    display: inline-block;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Transición suave */
+}
+
+/* Efecto Hover: Ampliación y brillo */
+.btn:hover {
+    transform: scale(1.1); /* Agranda el botón un 10% */
+    background-color: rgba(255, 255, 255, 0.1); /* Efecto visual de iluminación */
+}
+
+/* =========================================
+   4. BANNER (IMAGEN FULL WIDTH)
+   ========================================= */
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    line-height: 0; /* Elimina espacio extra debajo de la imagen */
+}
+
+.full-width-img {
+    width: 100%;      /* De margen a margen */
+    height: auto;     /* Mantiene proporción */
+    display: block;   /* Evita espacios en blanco residuales */
+}
+
+/* Añade esto al principio de tu CSS para que el salto no sea brusco */
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   5. SECCIÓN BIOGRAFÍA (PAUL RENNER)
+   ========================================= */
+
+/* Este contenedor ocupa todo el ancho y centra su contenido */
+.biografia-section {
+    background-color: #e31e24; /* Rojo de margen a margen */
+    display: flex;
+    justify-content: center;   /* Centrado horizontal total */
+    align-items: center;       /* Centrado vertical total */
+    width: 100%;
+    min-height: 600px;         
+    padding: 60px 5%;
+}
+
+/* IMPORTANTE: Tu HTML debe verse así para que el botón funcione:
+   <section id="creador" class="biografia-section"> ... </section> 
+*/
+
+/* Este es el bloque que agrupa foto y texto en el centro */
+.biografia-content {
+    display: flex;
+    flex-direction: row;       
+    align-items: center;       
+    max-width: 1200px;         
+    width: 100%;
+}
+
+/* Columna de la Izquierda (Foto) */
+.columna-foto {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-circular {
+    width: 500px; 
+    height: 500px;
+    border-radius: 50%;        
+    overflow: hidden;
+}
+
+.foto-circular img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+/* Columna de la Derecha (Texto) */
+.columna-texto {
+    flex: 1.5; 
+    padding-left: 60px;        
+    color: white;
+}
+
+.columna-texto h1 {
+    font-family: 'Futura', sans-serif;
+    font-size: 80px; 
+    margin-bottom: 20px;
+    line-height: 0.9;
+    text-transform: uppercase; 
+}
+
+.contenido-texto p {
+    font-family: 'Obviously', sans-serif; 
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    max-width: 600px; 
+    text-align: justify;
+}
+
+
+/* =========================================
+   6. FRANJA MOVIMIENTO (MARQUEE) - VERSIÓN MINI
+   ========================================= */
+
+.marquee-container {
+    width: 100%;
+    background-color: white; 
+    overflow: hidden;        
+    white-space: nowrap;     
+    padding: 10px 0;         /* Reducido a la mitad (de 20px a 10px) */
+    display: flex;
+    border-top: 1px solid #000; 
+}
+
+.marquee-content {
+    display: inline-block;
+    /* Mantenemos la animación pero ajustamos el texto dentro */
+    animation: marquee-scroll 15s linear infinite; 
+}
+
+.marquee-content span {
+    font-family: 'Futura', sans-serif;
+    font-size: 40px;         /* Reducido a la mitad (de 80px a 40px) */
+    font-weight: 900;        
+    color: black;            
+    letter-spacing: 2px;     /* También reducimos el espacio entre letras */
+    padding-right: 20px;     /* Espacio entre repeticiones */
+}
+
+/* La animación se mantiene igual para que el bucle sea infinito */
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); } 
+}
+
+
+
+
+
+
+
+/* Contenedor principal de la sección */
+.slider-full-width {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Franja Superior */
+.top-bar {
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.top-bar h2 {
+    font-family: 'Futura', sans-serif; /* Tipografía Futura como en la imagen */
+    font-size: 75px;
+    font-weight: 900;
+    margin: 0;
+}
+
+/* Contenedor de las fotos (Margen a margen) */
+.slider-container {
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las fotos técnicas */
+}
+
+.slider-track {
+    display: flex;
+    width: 400%;
+    animation: scroll-carrusel 20s infinite ease-in-out;
+}
+
+.slide {
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Franja Inferior */
+.bottom-bar {
+    background-color: #000;
+    padding: 80px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Puntos indicadores (Estilo cápsula gris) */
+.slider-dots {
+    display: flex;
+    gap: 15px;
+}
+
+.dot {
+    width: 80px; /* Más largas como en la captura */
+    height: 15px;
+    background-color: #555;
+    border-radius: 10px;
+}
+
+/* Animación sincronizada para los puntos */
+.d1 { animation: dot-highlight 20s infinite; }
+.d2 { animation: dot-highlight 20s infinite 5s; }
+.d3 { animation: dot-highlight 20s infinite 10s; }
+.d4 { animation: dot-highlight 20s infinite 15s; }
+
+@keyframes dot-highlight {
+    0%, 20% { background-color: #bbb; } /* Color activo */
+    25%, 100% { background-color: #555; }
+}
+
+@keyframes scroll-carrusel {
+    0%, 20% { transform: translateX(0); }
+    25%, 45% { transform: translateX(-25%); }
+    50%, 70% { transform: translateX(-50%); }
+    75%, 95% { transform: translateX(-75%); }
+    100% { transform: translateX(0); }
+}
+
+
+
+
+
+
+
+/* =========================================
+   8. SECCIÓN MUESTRARIO
+   ========================================= */
+
+.muestrario-section {
+    background-color: #000; /* Fondo negro total */
+    color: #fff;            /* Texto blanco */
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.muestrario-content {
+    max-width: 800px;       /* Contenedor estrecho para estilo editorial */
+    width: 100%;
+    text-align: center;
+}
+
+.titulo-muestrario {
+    font-family: 'Futura', sans-serif;
+    font-size: 110px;
+    font-weight: 900;
+    margin-bottom: 100px;
+}
+
+/* Estilo del alfabeto - Justificado a la derecha */
+.alfabeto-contenedor {
+    font-family: 'Futura', sans-serif;
+    font-size: 60px;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-bottom: 80px;
+    text-align: right; /* Alinea el texto a la derecha */
+    width: 100%;       /* Asegura que ocupe todo el ancho disponible para alinear */
+}
+
+.numeros {
+    margin-top: 40px;
+    font-size: 90px;
+}
+
+.variantes-contenedor {
+    text-align: left;
+    font-family: 'Futura', sans-serif;
+    width: 100%;
+}
+
+.variantes-contenedor p {
+    /* Tamaño masivo para impacto visual */
+    font-size: 60px; 
+    line-height: 1.1; 
+    margin-bottom: 80px;
+    letter-spacing: -2px; /* Ajuste para que las letras grandes se vean compactas */
+}
+
+/* 1. Texto de arriba: Bold (Negrita) */
+.variante-bold {
+    font-weight: 400; 
+    font-style: normal;
+}
+
+/* 2. Texto del medio: Normal */
+.variante-medium {
+    font-weight: 200; /* Peso estándar */
+    font-style: normal;
+}
+
+/* 3. Texto de abajo: Italic (Cursiva) */
+.variante-light {
+    font-weight: 200; 
+    font-style: italic; /* Cursiva */
+}
+
+
+
+
+
+
+
+/* =========================================
+   10. SECCIÓN FOTO SEGUIDA
+   ========================================= */
+
+.foto-seguida-section {
+    width: 100%;
+    background-color: #fff; /* O #000 si prefieres fondo negro */
+    padding: 20px 0;        /* Espacio pequeño arriba y abajo */
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-foto-centrada {
+    width: 100%;
+    max-width: 1200px;      /* Controla el ancho máximo para que no se deforme */
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-foto-centrada img {
+    width: 100%;            /* La foto se adapta al ancho del contenedor */
+    height: auto;           /* Mantiene la proporción original */
+    display: block;
+}
+
+
+
+
+/* --- ESTILOS DE APLICACIONES --- */
+.aplicaciones-section {
+    width: 100%;
+    background-color: #fff;
+}
+
+.banner-rojo-titulo {
+    background-color: #e31e24;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.banner-rojo-titulo h1 {
+    font-family: 'Futura', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: white;
+    margin: 0;
+}
+
+.galeria-marcas {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.marca-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.marca-item img {
+    max-width: 80%;
+    height: auto;
+}
+
+.white-bg { background-color: #ffffff; }
+.black-bg { background-color: #000000; }
+
+.marca-item.full-width {
+    padding: 0;
+}
+
+.marca-item.full-width img {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* --- ESTILOS DEL FOOTER (CONTACTO) --- */
+.footer-container {
+    background-color: #e31e24;
+    color: white;
+    padding: 80px 40px;
+    font-family: 'Futura', sans-serif;
+}
+
+.footer-inner {
+    border-top: 2px dashed rgba(255, 255, 255, 0.5);
+    border-bottom: 2px dashed rgba(255, 255, 255, 0.5);
+    padding: 40px 0;
+}
+
+.footer-title {
+    font-size: 8rem;
+    font-weight: 900;
+    margin-bottom: 30px;
+    letter-spacing: -3px;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.footer-col {
+    flex: 1;
+}
+
+.footer-col h3 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer-col p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.footer-col a {
+    color: white;
+    word-break: break-all;
+    text-decoration: none;
+    border-bottom: 1px solid white;
+}
+
+/* Responsive para móvil */
+@media (max-width: 768px) {
+    .footer-grid { flex-direction: column; }
+    .footer-title { font-size: 4rem; }
+    .banner-rojo-titulo h1 { font-size: 50px; }
+}

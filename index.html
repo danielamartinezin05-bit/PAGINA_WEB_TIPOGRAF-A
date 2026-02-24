@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Minimalista - Futura</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tip extra: Esto hace que el salto no sea brusco, sino un deslizamiento suave */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Esto evita que el menú tape el título al saltar (ajústalo según el alto de tu menú) */
+        section, footer {
+            scroll-margin-top: 70px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#inicio" class="btn">HOME</a>
+        </div>
+        <div class="menu-items">
+            <a href="#creador" class="btn">CREADOR</a>
+            <a href="#anatomia" class="btn">ANATOMÍA</a>
+            <a href="#muestrario" class="btn">MUESTRARIO</a>
+            <a href="#muestrario" class="btn">OPENTYPE</a> <a href="#aplicaciones" class="btn">APLICACIONES</a>
+            <a href="#contacto" class="btn">CONTACTO</a>
+        </div>
+    </nav>
+
+    <section id="inicio" class="banner-container">
+        <img src="futura_banner_jpeg.png" alt="Futura Bauhaus" class="full-width-img">
+    </section>
+
+    <section id="creador" class="biografia-section">
+        <div class="biografia-content">
+            <div class="columna-foto">
+                <div class="foto-circular">
+                    <img src="Paul_renner_imagen.png" alt="Paul Renner">
+                </div>
+            </div>
+            <div class="columna-texto">
+                <h1>PAUL RENNER</h1>
+                <div class="contenido-texto">
+                    <p>Paul Renner nace el 9 de agosto del año 1878 en la ciudad de Wernigerode...</p>
+                    <p>Paul estudia pintura y arquitectura... Renner no pertenece a la Bauhaus, pero desde fuera apoyó y defiende las posturas de la escuela...</p>
+                    <p>Entre los años 1925 a 1926 es Director del departamento de arte comercial...</p>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <div class="marquee-container">
+        <div class="marquee-content">
+            <span>FUTURA FUTURA FUTURA FUTURA FUTURA FUTURA&nbsp;</span>
+            <span>FUTURA FUTURA FUTURA FUTURA FUTURA FUTURA&nbsp;</span>
+        </div>
+    </div>
+
+    <section id="anatomia" class="slider-full-width">
+        <div class="top-bar">
+            <h2>rasgos distintivos y detalles técnicos</h2>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track">
+                <div class="slide"><img src="detalles_1.png" alt="Rasgos 1"></div>
+                <div class="slide"><img src="detalles_2.png" alt="Rasgos 2"></div>
+                <div class="slide"><img src="detalles_3.png" alt="Rasgos 3"></div>
+                <div class="slide"><img src="detalles_4.png" alt="Rasgos 4"></div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="slider-dots">
+                <div class="dot d1"></div>
+                <div class="dot d2"></div>
+                <div class="dot d3"></div>
+                <div class="dot d4"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="muestrario" class="muestrario-section">
+        <div class="muestrario-content">
+            <h2 class="titulo-muestrario">MUESTRARIO</h2>
+            <div class="alfabeto-contenedor">
+                <p class="mayusculas">ABCDEFGHYJKLMNÑ<br>OPQRSTUVWZYZ</p>
+                <p class="minusculas">abcdefghyjklmnñ<br>opqrstuvwxyx</p>
+                <p class="numeros">0123456789</p>
+            </div>
+            <div class="variantes-contenedor">
+                <p class="variante-bold">"La forma sigue a la función..."</p>
+                <p class="variante-medium">"La forma sigue a la función..."</p>
+                <p class="variante-light">"La forma sigue a la función..."</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="foto-seguida-section">
+        <div class="contenedor-foto-centrada">
+            <img src="detalles.png" alt="Descripción de la imagen">
+        </div>
+    </section>
+
+    <section id="aplicaciones" class="aplicaciones-section">
+        <div class="banner-rojo-titulo">
+            <h1>APLICACIONES</h1>
+        </div>
+        <div class="galeria-marcas">
+            <div class="marca-item white-bg"><img src="NETFLIX.png" alt="Netflix"></div>
+            <div class="marca-item white-bg"><img src="REDBUL.png" alt="Red Bull"></div>
+            <div class="marca-item black-bg"><img src="NIKE.png" alt="Nike"></div>
+            <div class="marca-item full-width"><img src="CARTELES.png" alt="Posters Futura"></div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer-container">
+        <div class="footer-inner">
+            <h1 class="footer-title">CONTACTO</h1>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>CRÉDITOS DEL PROYECTO</h3>
+                    <p>Este sitio web ha sido desarrollado como proyecto académico...</p>
+                </div>
+                <div class="footer-col">
+                    <h3>DISEÑO Y CÓDIGO</h3>
+                    <p>Realizado por Daniela Martínez Infante – 2026.</p>
+                </div>
+                <div class="footer-col">
+                    <h3>LICENCIA Y ADQUISICIÓN</h3>
+                    <p>La tipografía Futura es una marca registrada de Bauer Types SL.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
